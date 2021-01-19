@@ -31,6 +31,7 @@ nnoremap <leader>t :CreateTerminal<CR>
 command! -nargs=0 PYLINT call TermninalWrapper(printf('pylint %s', expand('%')))
 command! -nargs=0 COVERAGE call TerminalWrapper(printf('python3 -m coverage run %s && python3 -m coverage report -m', expand('%')))
 command! -nargs=0 CPP call TerminalWrapper(printf('clang++ -std=c++17 %s -o ./Output/%s.out && .//Output/%s.out', expand('%'), expand('%'), expand('%')))
+command! -nargs=0 C call TerminalWrapper(printf('gcc %s -o ./Output/%s.out && .//Output/%s.out', expand('%'), expand('%'), expand('%')))
 command! -nargs=0 PYTHON call TerminalWrapper(printf('python3 %s', expand('%')))
 command! -nargs=0 JAVA call TerminalWrapper(printf('javac %s && java %s', expand('%'), expand('%')))
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -38,8 +39,16 @@ command! -nargs=0 JAVA call TerminalWrapper(printf('javac %s && java %s', expand
 """""CPP AUTOCOMMANDS"""""
 augroup CppToolKit
     autocmd!
-    autocmd FileType c,cpp nnoremap <leader>fj :w<CR> :!clang++ -std=c++17 % -o ./Output/%.out && .//Output/%.out<CR>
-    autocmd FileType c,cpp nnoremap <leader>fh :CPP<CR>
+    autocmd FileType cpp nnoremap <leader>fj :w<CR> :!clang++ % -o ./Output/%.out && .//Output/%.out<CR>
+    autocmd FileType cpp nnoremap <leader>fh :CPP<CR>
+augroup END
+""""""""""""""""""""""""""
+
+"""""C AUTOCOMMANDS"""""
+augroup CToolKit
+    autocmd!
+    autocmd FileType c nnoremap <leader>fj :w<CR> :!gcc % -o ./Output/%.out && .//Output/%.out<CR>
+    autocmd FileType c nnoremap <leader>fh :C<CR>
 augroup END
 """"""""""""""""""""""""""
 
@@ -48,7 +57,6 @@ augroup PythonToolKit
     autocmd!
     autocmd FileType python nnoremap <leader>fj :w<CR> :!python3 %<CR>
     autocmd FileType python nnoremap <leader>fh :PYTHON<CR>
-    autocmd FileType python nnoremap <leader>p :PYLINT<CR>
     autocmd FileType python nnoremap <leader>fc :COVERAGE<CR>
 augroup END
 """""""""""""""""""""""""""""

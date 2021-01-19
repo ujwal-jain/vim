@@ -2,11 +2,9 @@ set autochdir
 set exrc
 set relativenumber
 set nohlsearch
-set hidden
-set noerrorbells
+set hidden set noerrorbells
 set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
+set shiftwidth=2 set expandtab
 set smartindent
 set nu
 set nowrap
@@ -26,3 +24,7 @@ set colorcolumn=80
 set hidden
 set splitright
 set splitbelow
+
+if(has("termguicolors"))
+	set termguicolors
+endif
