@@ -2,7 +2,6 @@ syntax on
 filetype plugin indent on
 
 call plug#begin()
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
