@@ -1,6 +1,7 @@
 set background=dark
 highlight clear CursorLineNR
-colorscheme nord 
+syntax on
+colorscheme yin
 highlight CursorLineNR ctermfg=None
 highlight SpellBad cterm=bold ctermfg=167 ctermBg=None
 highlight LineNR ctermBg=None

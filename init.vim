@@ -2,9 +2,9 @@ syntax on
 filetype plugin indent on
 
 call plug#begin()
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
