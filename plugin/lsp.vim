@@ -18,7 +18,7 @@ command! Format execute 'lua vim.lsp.buf.formatting()'
   local on_attach = function(_, bufnr)
     require('completion').on_attach()
   end
-  local servers = {'clangd', 'pyls', 'jdtls'}
+  local servers = {'clangd', 'pyls', 'jdtls', 'gopls'}
   for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
       on_attach = on_attach,

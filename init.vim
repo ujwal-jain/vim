@@ -7,8 +7,6 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'pgdouyon/vim-yin-yang'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -28,6 +26,11 @@ nnoremap <leader>pv :wincmd v<bar> :Ex<CR>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
+cnoremap <expr> <space>  wildmenumode()?"<Down>":"\<space>"
+cmap WQ wq
+cmap W w
+cmap Q q
+nnoremap <Tab> :tabNext<CR>
+nnoremap <C-t> :tabnew<CR>
 """"""""""""""""""""""""""""
 source ~/.config/nvim/terminal.vim
-
