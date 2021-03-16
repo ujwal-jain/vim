@@ -33,6 +33,3 @@ set laststatus=0
 set noshowcmd
 set cmdheight=1
 
-if(has("termguicolors"))
-	set termguicolors
-endif
