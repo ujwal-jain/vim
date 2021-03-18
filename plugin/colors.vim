@@ -1,14 +1,8 @@
-set background=dark
-highlight clear CursorLineNR
-" yin-yang colorscheme "
-colorscheme yin
-
-" nord colorscheme "
-"colorscheme nord
-"syntax on
-
+colorscheme gruvbox
 highlight CursorLineNR ctermfg=None
-highlight SpellBad cterm=bold ctermfg=167 ctermBg=None
-highlight LineNR ctermBg=None
-highlight VertSplit ctermbg=None ctermfg=245
-
+"highlight clear CursorLineNR
+highlight CursorLineNR ctermbg=236 ctermfg=243
+"highlight StatusLine ctermfg=bg ctermbg=123
+"highlight StatusLineNC ctermfg=bg ctermbg=bg 
+highlight CursorLine ctermbg=236
+highlight EndOfBuffer ctermfg=235 ctermbg=235

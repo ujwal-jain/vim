@@ -33,3 +33,6 @@ set laststatus=0
 set noshowcmd
 set cmdheight=1
 
+let &statusline='%#Normal '
+
+

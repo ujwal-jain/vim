@@ -4,6 +4,7 @@ filetype plugin indent on
 call plug#begin()
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'arcticicestudio/nord-vim'
