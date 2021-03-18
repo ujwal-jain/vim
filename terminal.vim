@@ -44,7 +44,9 @@ command! -nargs=0 PYTHON call TerminalWrapper(printf('python3 %s', expand('%')))
 command! -nargs=0 JAVA call TerminalWrapper(printf('javac %s && java %s', expand('%'), expand('%')))
 command! -nargs=0 JUNIT call TerminalWrapper(printf('javac TestCases.java && java org.junit.runner.JUnitCore TestCases'))
 command! -nargs=0 PROCESSING call TerminalWrapper(printf('javac -cp ${CLASSPATH}:processing-experimental.jar %s && java -cp ${CLASSPATH}:processing-experimental.jar %s', expand('%'), expand('%')))
-command! -nargs=0 GO call TerminalWrapper(prinf('go mod tidy && go run main.go'))
+command! -nargs=0 GORUN call TerminalWrapper(printf('go run %s', expand('%')))
+command! -nargs=0 GOBUILD call TerminalWrapper(printf('go build %s', expand('%')))
+command! -nargs=0 GOINSTALL call TerminalWrapper(printf('go install'))
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """""CPP AUTOCOMMANDS"""""
@@ -80,11 +82,14 @@ augroup END
 """""""""""""""""""""""""""
 
 """""GO AUTOCOMMANDS"""""
-augroup GoToolKit 
-    autocmd!
-    autocmd FileType java nnoremap <leader>fh :GO<CR>
+augroup GoToolKit
+  autocmd!
+  autocmd FileType go nnoremap <leader>fj :w<CR> :!go run %<CR>
+  autocmd FileType go nnoremap <leader>r :GORUN<CR>
+  autocmd FileType go nnoremap <leader>gb :GOBUILD<CR>
+  autocmd FileType go nnoremap <leader>gi :GOINSTALL<CR>
 augroup END
-"""""""""""""""""""""""""""
+"""""""""""""""""""""""""
 
 """""COMMENT AUTOCOMMANDS"""""
 augroup Comments

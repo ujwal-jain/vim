@@ -7,10 +7,6 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'arcticicestudio/nord-vim'
-Plug 'pgdouyon/vim-yin-yang'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 call plug#end()
