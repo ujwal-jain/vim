@@ -27,12 +27,7 @@ set hidden
 set splitright
 set splitbelow
 set fillchars=vert:\ 
-set noshowmode
-set noruler
-set laststatus=0
-set noshowcmd
-set cmdheight=1
 
-let &statusline='%#Normal '
+"let &statusline='%#Normal '
 
 

@@ -9,6 +9,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 """""GENERAL VIM REMAPS"""""
